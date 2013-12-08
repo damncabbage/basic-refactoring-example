@@ -4,6 +4,7 @@
   <h1>Import Products</h1>
   <%= form_for @product, url: import_products_path, html: {multipart: true} do |f| %>
     <%= f.file_field :file %>
+    <p><%= f.check_box :notify, :checked => true, :style => "display:inline;" %> Notify admin?</p>
     <%= f.submit :import %>
   <% end %>
 </section>

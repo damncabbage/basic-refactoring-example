@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
   after_create :created
-
+  mount_uploader :photo, ProductPhotoUploader
   validates_presence_of :name, :price
 
   def created
