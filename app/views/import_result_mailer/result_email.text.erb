@@ -1,0 +1,10 @@
+### Products Imported! ###
+
+The following new products have been imported:
+
+<% @products.each do |product| %>
+  <%= product.sku %>: "<%= product.name %>", $<%= product.price %>
+<% end %>
+
+Regards,
+The Admin
