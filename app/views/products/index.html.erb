@@ -8,6 +8,7 @@
       <th>Sku</th>
       <th>Name</th>
       <th>Price</th>
+      <th>Photo</th>
       <th></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= product.sku %></td>
         <td><%= product.name %></td>
         <td><%= product.price %></td>
+        <td><%= link_to('Photo', product.photo.preview.url, :"data-featherlight" => 'image') if product.photo.present? %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
