@@ -13,3 +13,11 @@ gem 'jquery-rails'
 
 gem 'carrierwave'
 gem 'mini_magick'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'capybara-basic_auth_helper'
+  gem 'guard-rspec'
+  gem 'ruby_gntp'
+end
